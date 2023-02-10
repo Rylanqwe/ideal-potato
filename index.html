@@ -6,11 +6,23 @@
   </head>
   <body>
     <h1>Solana Lottery</h1>
-    <p>Welcome to the Solana lottery! To play, simply purchase a ticket by clicking the button below:</p>
-    <button id="purchase-ticket-button">Purchase Ticket</button>
+    <p>Welcome to the Solana lottery! To play, connect your Solana wallet:</p>
+    <button id="connect-wallet-button">Connect Wallet</button>
+    <p>Once you have connected your wallet, you can purchase a ticket by clicking the button below:</p>
+    <button id="purchase-ticket-button" disabled>Purchase Ticket</button>
     <p>Once all tickets have been sold, the winning numbers will be chosen and the winners will be announced here:</p>
     <p id="winning-numbers"></p>
     <script>
+      // Add event listener to the Connect Wallet button
+      const connectWalletButton = document.getElementById("connect-wallet-button");
+      connectWalletButton.addEventListener("click", function() {
+        // Connect the user's Solana wallet
+        // Add your code for connecting the user's Solana wallet here
+        // Then enable the Purchase Ticket button
+        const purchaseTicketButton = document.getElementById("purchase-ticket-button");
+        purchaseTicketButton.disabled = false;
+      });
+
       // Add event listener to the Purchase Ticket button
       const purchaseTicketButton = document.getElementById("purchase-ticket-button");
       purchaseTicketButton.addEventListener("click", function() {
